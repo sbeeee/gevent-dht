@@ -8,8 +8,9 @@ The following example creates a network of one node
 
 ```
 import gevent_dht
-table = gevent_dht.distributedHashTable( None )
+
 // This tell the network it is the first node by default it listens on port 8339
+table = gevent_dht.distributedHashTable( None )
 
 // This sets a value in our hash table
 table['key_1'] = [1,2,3]
