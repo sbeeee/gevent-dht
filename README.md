@@ -19,7 +19,7 @@ table.append('key_1', 4) #Adds an item to a list in a hash table
                          #It will put a list in place and then append 
                          #to it.
                          
-#Now we are adding another node
+// Now we are adding another node
     
 other_clients_table = gevent_dht.distributedHashTable(
                     '127.0.0.1:8339', local_port = 8449)
