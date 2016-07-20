@@ -4,7 +4,7 @@ There are two things you have to concern yourself with. <br />
 1] **Bootstrapping the network** <br />
 The following example creates a network of one node
 
--------------------------------------------------------------------
+
 
 ```
 
@@ -33,7 +33,7 @@ for i in other_clients_table['key_1']:
     print i #Prints 1234
 ```
 
--------------------------------------------------------------------
+
 
 So in order to connect to an existing network you must have a way to get an 
 address of another member. It doesn't have to be the first node but needs 
