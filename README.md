@@ -5,7 +5,9 @@ There are two things you have to concern yourself with. <br />
 The following example creates a network of one node
 
 -------------------------------------------------------------------
-`
+
+```
+
 import gevent_dht
 table = gevent_dht.distributedHashTable(None) #This tell the network it 
         # is the first node by default it listens on port 8339
@@ -29,7 +31,7 @@ other_clients_table = gevent_dht.distributedHashTable(
     
 for i in other_clients_table['key_1']:
     print i #Prints 1234
-`
+```
 
 -------------------------------------------------------------------
 
