@@ -1,7 +1,7 @@
 ##### This is a basic implementation of a DHT using the gevent library.
 
 There are two things you have to concern yourself with. <br />
-1] Bootstrapping the network. <br />
+1] **Bootstrapping the network** <br />
 The following example creates a network of one node
 
 -------------------------------------------------------------------
@@ -39,7 +39,7 @@ So in order to connect to an existing network you must have a way to get an
 address of another member. It doesn't have to be the first node but needs 
 to be a node in the network.
 
-2] Latency/ This may fail.
+2] **Latency/ This may fail**
 
 Keys are not guarenteed to persist forever, nodes may crash, the network 
 may eat messages etc... While we are working in tcp/ip mode there may still 
