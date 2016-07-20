@@ -7,30 +7,27 @@ The following example creates a network of one node
 
 
 ```
-
 import gevent_dht
-table = gevent_dht.distributedHashTable(None) #This tell the network it 
-        # is the first node by default it listens on port 8339
-        #
-        
-table['key_1'] = [1,2,3] #This sets a value in our hash table
+table = gevent_dht.distributedHashTable( None )
+// This tell the network it is the first node by default it listens on port 8339
+
+// This sets a value in our hash table
+table['key_1'] = [1,2,3]
 for i in table['key_1']:
-    print i #Prints 123
+    // Prints 123
+    print i
     
-table.append('key_1', 4) #Adds an item to a list in a hash table
-                         #Note if the key is not in the hash table
-                         #It will put a list in place and then append 
-                         #to it.
+// Adds an item to a list in a hash table. 
+// Note : If the key is not in the hash table. It will put a list in place and then append to it.
+table.append('key_1', 4) 
                          
-// Now we are adding another node
-    
-other_clients_table = gevent_dht.distributedHashTable(
-                    '127.0.0.1:8339', local_port = 8449)
-    #Another client has connected. It supplied the address of 
-    # a node in the network to connect with the preexisting network
-    
+// Now we are adding another node :
+// Another client has connected. It supplied the address of a node in the network to connect with the preexisting network
+other_clients_table = gevent_dht.distributedHashTable( '127.0.0.1:8339' , local_port = 8449 )
+
 for i in other_clients_table['key_1']:
-    print i #Prints 1234
+    // Prints 1234
+    print i
 ```
 
 
